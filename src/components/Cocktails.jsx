@@ -22,6 +22,51 @@ const Cocktails = () => {
         x: 100,
         y: 100,
       });
+
+    const cocktails_list = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".list",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+    cocktails_list.fromTo(
+      ".list h2",
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+      },
+    );
+
+    cocktails_list
+      .fromTo(
+        ".popular ul li",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          ease: "power2.out",
+        },
+        0,
+      )
+      .fromTo(
+        ".loved ul li",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          ease: "power2.out",
+        },
+        0,
+      );
   });
 
   return (

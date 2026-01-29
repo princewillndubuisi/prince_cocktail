@@ -4,6 +4,7 @@ import { ScrollTrigger, TextPlugin } from "gsap/all";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Cocktails from "./components/Cocktails";
+import About from "./components/About";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Cocktails />
+      <About />
     </main>
   );
 };
