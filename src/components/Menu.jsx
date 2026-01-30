@@ -60,7 +60,7 @@ const Menu = () => {
         yPercent: 100,
       },
       {
-        opacity: 100,
+        opacity: 1,
         yPercent: 0,
         duration: 1,
         ease: "power1.inOut",
